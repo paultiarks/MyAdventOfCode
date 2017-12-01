@@ -10,7 +10,7 @@ import Foundation
 
 struct DayOneCaptcha {
     // Return the sum of number characters in the string that match the next character
-    static func solve(captcha: String) -> Int {
+    static func solvePartOne(captcha: String) -> Int {
         let characters = Array(captcha)
         guard let first = characters.first else { return 0 }
 

@@ -21,14 +21,14 @@ class DayOneTests: XCTestCase {
     }
     
     func testExamples() {
-        XCTAssertEqual(DayOneCaptcha.solve(captcha: "1122"), 3)
-        XCTAssertEqual(DayOneCaptcha.solve(captcha: "1111"), 4)
-        XCTAssertEqual(DayOneCaptcha.solve(captcha: "1234"), 0)
-        XCTAssertEqual(DayOneCaptcha.solve(captcha: "91212129"), 9)
+        XCTAssertEqual(DayOneCaptcha.solvePartOne(captcha: "1122"), 3)
+        XCTAssertEqual(DayOneCaptcha.solvePartOne(captcha: "1111"), 4)
+        XCTAssertEqual(DayOneCaptcha.solvePartOne(captcha: "1234"), 0)
+        XCTAssertEqual(DayOneCaptcha.solvePartOne(captcha: "91212129"), 9)
     }
 
     func testMyInput() {
-        let mySolution = DayOneCaptcha.solve(captcha: myPuzzle)
+        let mySolution = DayOneCaptcha.solvePartOne(captcha: myPuzzle)
         XCTAssertEqual(mySolution, 1044)
     }
     
