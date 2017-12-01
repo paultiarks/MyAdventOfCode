@@ -9,20 +9,22 @@
 import Foundation
 
 struct DayOneCaptcha {
-    // Return the sum of number characters in the string that match the next character
-    static func solvePartOne(captcha: String) -> Int {
-        let characters = Array(captcha)
-        guard let first = characters.first else { return 0 }
 
+    // Advances the index by the specified amount, wrapping around to the start of the array
+    static func wrappedIndex(for array: [Any], startingAt: Int, advancedBy: Int) -> Int {
+        var fullIndex = startingAt + advancedBy
+        while array.count - 1 < fullIndex {
+            fullIndex -= array.count
+        }
+        return fullIndex
+    }
+
+    private static func solve(captcha: [String.Element], advance: Int) -> Int {
         var counter = 0
         var sum = 0
-        for character in characters {
-            var next = character
-            if (counter + 1) == characters.count {
-                next = first
-            } else {
-                next = characters[counter + 1]
-            }
+        for character in captcha {
+            let nextIndex = wrappedIndex(for: captcha, startingAt: counter, advancedBy: advance)
+            let next = captcha[nextIndex]
 
             if let firstInt = Int(character.description),
                 let secondInt = Int(next.description) {
@@ -31,10 +33,21 @@ struct DayOneCaptcha {
                 }
             }
 
-
             counter += 1
         }
 
         return sum
+    }
+
+    // Return the sum of number characters in the string that match the next character
+    static func solvePartOne(captcha: String) -> Int {
+        let characters = Array(captcha)
+        return solve(captcha: characters, advance: 1)
+    }
+
+    // Return the sum of number characters in the string that match the one halfway around the list
+    static func solvePartTwo(captcha: String) -> Int {
+        let characters = Array(captcha)
+        return solve(captcha: characters, advance: characters.count / 2)
     }
 }

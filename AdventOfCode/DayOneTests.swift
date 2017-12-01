@@ -19,17 +19,43 @@ class DayOneTests: XCTestCase {
     override func tearDown() {
         super.tearDown()
     }
+
+    func testWrap() {
+        let testArray = ["1", "1", "1", "1"]
+        XCTAssertEqual(DayOneCaptcha.wrappedIndex(for: testArray, startingAt: 0, advancedBy: 1), 1)
+        XCTAssertEqual(DayOneCaptcha.wrappedIndex(for: testArray, startingAt: 0, advancedBy: 3), 3)
+        XCTAssertEqual(DayOneCaptcha.wrappedIndex(for: testArray, startingAt: 3, advancedBy: 1), 0)
+        XCTAssertEqual(DayOneCaptcha.wrappedIndex(for: testArray, startingAt: 3, advancedBy: 2), 1)
+        XCTAssertEqual(DayOneCaptcha.wrappedIndex(for: testArray, startingAt: 1, advancedBy: 9), 2)
+    }
+
+    // MARK: Part One
     
-    func testExamples() {
+    func testPartOneExamples() {
         XCTAssertEqual(DayOneCaptcha.solvePartOne(captcha: "1122"), 3)
         XCTAssertEqual(DayOneCaptcha.solvePartOne(captcha: "1111"), 4)
         XCTAssertEqual(DayOneCaptcha.solvePartOne(captcha: "1234"), 0)
         XCTAssertEqual(DayOneCaptcha.solvePartOne(captcha: "91212129"), 9)
     }
 
-    func testMyInput() {
+    func testPartOneMyInput() {
         let mySolution = DayOneCaptcha.solvePartOne(captcha: myPuzzle)
         XCTAssertEqual(mySolution, 1044)
+    }
+
+    // MARK: Part Two
+
+    func testPartTwoExamples() {
+        XCTAssertEqual(DayOneCaptcha.solvePartTwo(captcha: "1212"), 6)
+        XCTAssertEqual(DayOneCaptcha.solvePartTwo(captcha: "1221"), 0)
+        XCTAssertEqual(DayOneCaptcha.solvePartTwo(captcha: "123425"), 4)
+        XCTAssertEqual(DayOneCaptcha.solvePartTwo(captcha: "123123"), 12)
+        XCTAssertEqual(DayOneCaptcha.solvePartTwo(captcha: "12131415"), 4)
+    }
+
+    func testPartTwoMyInput() {
+        let mySolution = DayOneCaptcha.solvePartTwo(captcha: myPuzzle)
+        XCTAssertEqual(mySolution, 1054)
     }
     
 }
