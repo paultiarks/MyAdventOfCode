@@ -13,6 +13,8 @@
 		DAED7C761FD1AF1900627601 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAED7C751FD1AF1900627601 /* Assets.xcassets */; };
 		DAED7C791FD1AF1900627601 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAED7C771FD1AF1900627601 /* LaunchScreen.storyboard */; };
 		DAED7C841FD1AF1900627601 /* AdventOfCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED7C831FD1AF1900627601 /* AdventOfCodeTests.swift */; };
+		DAED7C8F1FD1AF3F00627601 /* DayOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED7C8E1FD1AF3F00627601 /* DayOne.swift */; };
+		DAED7C911FD1AF5300627601 /* DayOneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED7C901FD1AF5300627601 /* DayOneTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		DAED7C7F1FD1AF1900627601 /* AdventOfCodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdventOfCodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAED7C831FD1AF1900627601 /* AdventOfCodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdventOfCodeTests.swift; sourceTree = "<group>"; };
 		DAED7C851FD1AF1900627601 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAED7C8E1FD1AF3F00627601 /* DayOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayOne.swift; sourceTree = "<group>"; };
+		DAED7C901FD1AF5300627601 /* DayOneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayOneTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 				DAED7C751FD1AF1900627601 /* Assets.xcassets */,
 				DAED7C771FD1AF1900627601 /* LaunchScreen.storyboard */,
 				DAED7C7A1FD1AF1900627601 /* Info.plist */,
+				DAED7C8E1FD1AF3F00627601 /* DayOne.swift */,
+				DAED7C901FD1AF5300627601 /* DayOneTests.swift */,
 			);
 			path = AdventOfCode;
 			sourceTree = "<group>";
@@ -201,6 +207,7 @@
 			files = (
 				DAED7C711FD1AF1900627601 /* ViewController.swift in Sources */,
 				DAED7C6F1FD1AF1900627601 /* AppDelegate.swift in Sources */,
+				DAED7C8F1FD1AF3F00627601 /* DayOne.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAED7C841FD1AF1900627601 /* AdventOfCodeTests.swift in Sources */,
+				DAED7C911FD1AF5300627601 /* DayOneTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
