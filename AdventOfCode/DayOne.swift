@@ -12,7 +12,6 @@ struct DayOneCaptcha {
     // Return the sum of number characters in the string that match the next character
     static func solve(captcha: String) -> Int {
         let characters = Array(captcha)
-//        guard let last = characters.last else { return 0 }
         guard let first = characters.first else { return 0 }
 
         var counter = 0
