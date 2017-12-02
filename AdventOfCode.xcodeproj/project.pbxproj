@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DADE3FFC1FD2E99400FEDE46 /* DayTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE3FFB1FD2E99400FEDE46 /* DayTwo.swift */; };
+		DADE3FFE1FD2E9A300FEDE46 /* DayTwoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE3FFD1FD2E9A300FEDE46 /* DayTwoTests.swift */; };
 		DAED7C6F1FD1AF1900627601 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED7C6E1FD1AF1900627601 /* AppDelegate.swift */; };
 		DAED7C711FD1AF1900627601 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED7C701FD1AF1900627601 /* ViewController.swift */; };
 		DAED7C741FD1AF1900627601 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAED7C721FD1AF1900627601 /* Main.storyboard */; };
@@ -28,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DADE3FFB1FD2E99400FEDE46 /* DayTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTwo.swift; sourceTree = "<group>"; };
+		DADE3FFD1FD2E9A300FEDE46 /* DayTwoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTwoTests.swift; sourceTree = "<group>"; };
 		DAED7C6B1FD1AF1900627601 /* AdventOfCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdventOfCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAED7C6E1FD1AF1900627601 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAED7C701FD1AF1900627601 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +93,8 @@
 				DAED7C7A1FD1AF1900627601 /* Info.plist */,
 				DAED7C8E1FD1AF3F00627601 /* DayOne.swift */,
 				DAED7C901FD1AF5300627601 /* DayOneTests.swift */,
+				DADE3FFB1FD2E99400FEDE46 /* DayTwo.swift */,
+				DADE3FFD1FD2E9A300FEDE46 /* DayTwoTests.swift */,
 			);
 			path = AdventOfCode;
 			sourceTree = "<group>";
@@ -208,6 +214,7 @@
 				DAED7C711FD1AF1900627601 /* ViewController.swift in Sources */,
 				DAED7C6F1FD1AF1900627601 /* AppDelegate.swift in Sources */,
 				DAED7C8F1FD1AF3F00627601 /* DayOne.swift in Sources */,
+				DADE3FFC1FD2E99400FEDE46 /* DayTwo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAED7C841FD1AF1900627601 /* AdventOfCodeTests.swift in Sources */,
+				DADE3FFE1FD2E9A300FEDE46 /* DayTwoTests.swift in Sources */,
 				DAED7C911FD1AF5300627601 /* DayOneTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
