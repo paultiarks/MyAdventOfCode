@@ -26,6 +26,27 @@ func rows(for string: String) -> [Row] {
     return rows
 }
 
+extension Array where Iterator.Element == Int {
+    func modChecksum() -> Int {
+        var i = 0
+        var accumulator = 0
+        for value in self {
+            var foundValue = 0
+            var workingArray = self
+            workingArray.remove(at: i)
+            for otherValue in workingArray {
+                if value % otherValue == 0 {
+                    foundValue = value / otherValue
+                }
+            }
+            accumulator += foundValue
+            i += 1
+        }
+
+        return accumulator
+    }
+}
+
 struct Spreadsheet {
 
     private let rows: [Row]
@@ -49,6 +70,14 @@ struct Spreadsheet {
         var accumulator = 0
         for rowChecksum in rowChecksums {
             accumulator += rowChecksum
+        }
+        return accumulator
+    }
+
+    func modChecksum() -> Int {
+        var accumulator = 0
+        for row in rows {
+            accumulator += row.modChecksum()
         }
         return accumulator
     }

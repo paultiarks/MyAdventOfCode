@@ -15,6 +15,13 @@ class DayTwoTests: XCTestCase {
     7   5    3
     2   4   6   8
 """
+
+    let modTestValue = """
+5 9 2 8
+9 4 7 3
+3 8 6 5
+"""
+
     let myPuzzle = """
 1640    590    93    958    73    1263    1405    1363    737    712    1501    390    68    1554    959    79
 4209    128    131    2379    2568    2784    2133    145    3618    1274    3875    158    1506    3455    1621    3799
@@ -60,6 +67,11 @@ class DayTwoTests: XCTestCase {
     func testMyPuzzle() {
         let sheet = Spreadsheet(rows: rows(for: myPuzzle))
         XCTAssertEqual(sheet.checksum(), 48357)
+    }
+
+    func testExampleMod() {
+        let sheet = Spreadsheet(rows: rows(for: modTestValue))
+        XCTAssertEqual(sheet.modChecksum(), 9)
     }
     
 }
