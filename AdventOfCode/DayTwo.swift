@@ -27,6 +27,17 @@ func rows(for string: String) -> [Row] {
 }
 
 extension Array where Iterator.Element == Int {
+
+    func checksum() -> Int {
+        var maxValue = self.first ?? 0
+        var minValue = self.first ?? 0
+        for value in self {
+            maxValue = Swift.max(maxValue, value)
+            minValue = Swift.min(minValue, value)
+        }
+        return abs(maxValue - minValue)
+    }
+
     func modChecksum() -> Int {
         var i = 0
         var accumulator = 0
@@ -56,20 +67,9 @@ struct Spreadsheet {
     }
 
     func checksum() -> Int {
-        var rowChecksums = [] as [Int]
-        for row in rows {
-            var maxValue = row.first ?? 0
-            var minValue = row.first ?? 0
-            for value in row {
-                maxValue = max(maxValue, value)
-                minValue = min(minValue, value)
-            }
-            let newChecksum = abs(maxValue - minValue)
-            rowChecksums.append(newChecksum)
-        }
         var accumulator = 0
-        for rowChecksum in rowChecksums {
-            accumulator += rowChecksum
+        for row in rows {
+            accumulator += row.checksum()
         }
         return accumulator
     }
