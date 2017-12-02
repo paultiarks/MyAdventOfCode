@@ -35,8 +35,8 @@ class DayTwoTests: XCTestCase {
     }
 
     func testExample() {
-        let sheet = Spreadsheet(rows: [])
-        XCTAssertEqual(sheet.checksum(), 0)
+        let sheet = Spreadsheet(rows: rows(for: testValue))
+        XCTAssertEqual(sheet.checksum(), 18)
     }
     
 }

@@ -35,6 +35,21 @@ struct Spreadsheet {
     }
 
     func checksum() -> Int {
-        return 0
+        var rowChecksums = [] as [Int]
+        for row in rows {
+            var maxValue = row.first ?? 0
+            var minValue = row.first ?? 0
+            for value in row {
+                maxValue = max(maxValue, value)
+                minValue = min(minValue, value)
+            }
+            let newChecksum = abs(maxValue - minValue)
+            rowChecksums.append(newChecksum)
+        }
+        var accumulator = 0
+        for rowChecksum in rowChecksums {
+            accumulator += rowChecksum
+        }
+        return accumulator
     }
 }
