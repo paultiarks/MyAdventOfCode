@@ -73,5 +73,10 @@ class DayTwoTests: XCTestCase {
         let sheet = Spreadsheet(rows: rows(for: modTestValue))
         XCTAssertEqual(sheet.modChecksum(), 9)
     }
+
+    func testMyPuzzleMod() {
+        let sheet = Spreadsheet(rows: rows(for: myPuzzle))
+        XCTAssertEqual(sheet.modChecksum(), 351)
+    }
     
 }
