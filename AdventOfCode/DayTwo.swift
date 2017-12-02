@@ -10,9 +10,10 @@ import Foundation
 
 typealias Row = [Int]
 
-func rows(for string: [String]) -> [Row] {
+func rows(for string: String) -> [Row] {
     var rows = [] as [Row]
-    for stringValue in string {
+    let rowStrings = string.components(separatedBy: .newlines)
+    for stringValue in rowStrings {
         let values = stringValue.components(separatedBy: .whitespaces)
         var newRow = [] as [Int]
         for value in values {
